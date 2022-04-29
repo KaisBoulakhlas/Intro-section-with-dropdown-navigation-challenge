@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/KaisBoulakhlas/Intro-section-with-dropdown-navigation-challenge.git]
 - Live Site URL: [https://intro-section-dropdowon-navigation.netlify.app]
 
 ## My process
