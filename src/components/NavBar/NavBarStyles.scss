@@ -1,0 +1,105 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/placeholders';
+
+.header {
+    width:100%;
+    height:80px;
+
+    .header__navigation{
+        display: flex;
+        width: 100%;
+        height:100%;
+    
+        .header__logo{
+            margin: 2rem auto auto 2rem;
+            max-width:100px;
+        }
+    
+        .header__toggle__button{
+            display:none;
+            cursor:pointer;
+            margin: auto 2rem auto auto;
+            max-width:30px;
+    
+            @include respond-to('tablet') {
+                display:block;   
+            }
+        }
+
+        .header__nav__links{
+            display:flex;
+            gap: 4rem;
+            padding: 2rem 4rem;
+            flex-grow: 1;
+        
+            .nav__link__dropdown {
+                color: $color-neutral-medium-gray;
+                gap:0.25em;
+                cursor: pointer;
+                padding-bottom: 1.5rem;
+                display: block;
+                position: relative;
+                font-size:0.95rem;
+    
+                .nav__link__icon{
+                    @extend %link-icon;
+                }    
+    
+                &:hover {
+                    @extend %color-link-hover;
+                    > .nav__link__menu{
+                        opacity: 1;
+                        transform: translateY(0);
+                        pointer-events: auto;
+                    }
+        
+                    .nav__link__icon{
+                        @extend %rotate-180deg;
+                    }
+                }
+            }
+        
+            @include respond-to('tablet') {
+                display: none;
+            }
+        }
+    }
+    
+
+    .nav__link{
+        @extend %transition-link-color;
+        &:hover{
+             > a {
+                @extend %color-link-hover;
+            }
+        }
+    }
+
+    .header__login__register{
+        @extend %flex-register-login;
+        column-gap: 2.75em;
+        margin-right: 2em;
+    
+        .header__link__button{
+            @extend %link-button;
+            border-radius:0.75em;
+            &:hover{
+                @extend %link-button-hover;
+            }
+        }
+    
+        .nav__link {
+            &:hover{
+                @extend %color-link-hover;
+            }
+        }
+    
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+}
+
+
+

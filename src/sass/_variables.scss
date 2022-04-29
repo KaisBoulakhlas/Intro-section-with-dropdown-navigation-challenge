@@ -1,0 +1,18 @@
+// Screen sizes
+$breakpoints: (
+  'phone': ( max-width: 550px ),
+  'tablet': ( max-width: 990px ),
+  'desktop-medium': ( max-width: 1300px ),
+  'desktop-large':  ( max-width: 1440px )
+) !default;
+
+// Colors
+$color-neutral-almost-white: hsl(0, 0%, 98%);
+$color-neutral-medium-gray: hsl(0, 0%, 41%);
+$color-neutral-almost-black: hsl(0, 0%, 8%);
+
+//Fonts
+$font-size-text:18px;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$font-family-epilogue:'Epilogue', sans-serif;

@@ -1,0 +1,17 @@
+@import './variables';
+
+p{
+    font-size: $font-size-text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    font-weight:normal;
+}
+
+h1{
+    font-size:4rem;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: $font-weight-700;
+}

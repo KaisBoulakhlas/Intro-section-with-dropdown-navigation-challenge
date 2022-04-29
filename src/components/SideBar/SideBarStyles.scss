@@ -1,0 +1,101 @@
+@import '../../sass/variables';
+@import '../../sass/placeholders';
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-5;
+    background-color: rgba(0,0,0,0); /*dim the background*/
+    transition:background-color 0.5s ease-in-out;
+
+    &.show{
+        z-index:999;
+        background-color: rgba(0,0,0,0.7);
+    }
+}
+
+.sidebar{
+    background-color:$color-neutral-almost-white;
+    padding:1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position:fixed;
+    opacity:0;
+    z-index:999;
+    width: 250px;
+    right: -100%;
+    top:0;
+    height:100%;
+    transition:opacity 0.3s ease-in-out,right 0.3s ease-in-out;
+
+    &.open{
+        opacity:1;
+        right: 0;
+    }
+
+    .sidebar__close__button{
+        margin-left: auto;
+        max-width: 30px;
+        cursor: pointer;
+    }
+
+    .sidebar__links{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        gap: 1.25rem;
+    
+        .sidebar__link__dropdown {
+            
+            .sidebar__link__icon{
+                @extend %link-icon;
+            }
+
+            &.extented {
+                > .sidebar__link__icon{
+                    @extend %rotate-180deg;
+                }
+            }
+        }
+
+        .sidebar__link, .sidebar__link a, span.sidebar__link{
+            @extend %transition-link-color;
+            font-size: 0.95rem;
+            color: $color-neutral-medium-gray;
+
+            &:hover{
+                @extend %color-link-hover;
+            }
+        }
+    }
+
+    .sidebar__login__register{
+        @extend %flex-register-login;
+        flex-direction: column;
+        gap: 1em;
+        margin: 2rem auto;
+        width:100%;
+    
+        .sidebar__link__button{
+            @extend %link-button;
+            width:100%;
+            text-align:center;
+            &:hover{
+                @extend %link-button-hover;
+            }
+        }
+    
+        .sidebar__link {
+            @extend %transition-link-color;
+            &:hover{
+                @extend %color-link-hover;
+            }
+        }
+    }
+}
+
+

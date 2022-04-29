@@ -1,0 +1,128 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+
+.container__left{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 2rem 0rem 0rem 9rem;
+    row-gap: 2.25rem;
+    display: flex;
+    margin-top: 5rem;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .container__left__title{
+        font-size: 5rem;
+
+        span{
+            display: block;
+        }
+    }
+
+    .container__left__text--color-medium-gray{
+        color:$color-neutral-medium-gray;
+        font-size: 0.95rem;
+        max-width: 70%;
+        line-height: 1.5;
+    }
+
+    .image__client{
+        max-width:100px;
+    }
+
+    .btn__bg--black{
+        padding: 0.95rem 1.5rem;
+        background-color: $color-neutral-almost-black;
+        color: white;
+        font-weight:$font-weight-700;
+        border:2px solid $color-neutral-almost-black;
+        transition:background-color 0.2s linear,color 0.2s linear;
+
+        &:hover{
+            color:$color-neutral-almost-black;
+            background-color: transparent;
+        }
+    }
+
+    .container__left__clients{
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0rem;
+        gap: 1.5rem;
+    }
+
+    @include respond-to('desktop-medium') {
+        padding: 5rem 0rem 0rem 3rem;
+        
+        .container__left__clients{
+            flex-wrap: wrap;
+        }
+
+        .container__left__title{
+            font-size: 3.5rem;
+        }
+    }
+
+    @include respond-to('tablet') {
+        padding: 5rem 0rem 0rem 0rem;
+        margin-top: 0;
+        .container__left__title{
+            font-size: 2.5rem;
+        }
+
+        .container__left__clients{
+            margin-right: 1rem;
+        }
+        .btn__bg--black{
+            padding: 0.75rem 1.25rem;
+        }
+    }
+
+    @include respond-to('phone') {
+        grid-row:2;
+        row-gap: 0.25rem;
+        padding: 1.75rem 0rem 0rem 0rem;
+
+        > * {
+            margin: 0.25rem auto;
+        }
+
+        .container__left__title{
+            font-size: 2rem;
+            display: inline-flex;
+            gap: 0.5rem;
+        }
+
+        .container__left__text--color-medium-gray{
+            max-width: 85%;
+        }
+
+        .container__left__clients{
+            margin: auto;
+            .image__client{
+                max-width: 70px;
+            }
+        }
+    }
+}
+
+.container__right{
+    grid-column: 2;
+    grid-row: 1;
+    height:100%;
+    background-image: url("../../assets/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    
+
+    @include respond-to('phone') {
+        grid-row:1;
+        grid-column: 1;    
+        background-image: url("../../assets/image-hero-mobile.png");
+    }
+}
+

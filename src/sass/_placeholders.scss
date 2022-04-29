@@ -1,0 +1,39 @@
+@import './variables';
+
+%transition-link-color {
+    transition:color 0.2s ease-in-out;
+}
+
+%color-link-hover {
+    color:$color-neutral-almost-black;
+}
+
+%link-icon {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    max-width: 10px;
+    transition:transform 0.2s ease-in-out;
+}
+
+%rotate-180deg {
+    transform: rotate(180deg);
+}
+
+%flex-register-login {
+    font-size:1rem;
+    display: flex;
+    align-items: center;
+}
+
+%link-button {
+    padding: 0.75em 1.25em;
+    border:2px solid $color-neutral-medium-gray;
+    background: transparent;
+    border-radius:0.75em;
+    @extend %transition-link-color;
+}
+
+%link-button-hover{
+    border:2px solid $color-neutral-almost-black;
+    color:$color-neutral-almost-black;
+}
