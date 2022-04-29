@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import NavBar from '../components/NavBar/NavBar';
 import SideBar from '../components/SideBar/SideBar';
 import { companyDropdown, featuresDropdown } from '../components/NavBar/Dropdown/data'
-import "../sass/_global.scss"
 import Banner from '../components/Banner/Banner';
 
 export default function Home() {
