@@ -30,14 +30,14 @@ export default function SideBar({ featuresData, companyData, isOpen, toggle }) {
             setFeatureIsExtented(false);
             setCompanyIsExtented(false);
           }} 
-          src={closeMenu}/>
+          src={closeMenu} alt=""/>
         <ul className="sidebar__links">
               <li onClick={handleExtendDropDownFeature} className={featureIsExtented ? "sidebar__link__dropdown extented" : "sidebar__link__dropdown"}>
-                <span className="sidebar__link">Features</span><img className="sidebar__link__icon" src={arrowDown} />
+                <span className="sidebar__link">Features</span><img alt="" className="sidebar__link__icon" src={arrowDown} />
                 <Dropdown  classNameDropdownItem="sidebar__dropdown__item" classNameMenu="sidebar__link__menu" left="0" data={featuresData} />
               </li>
               <li onClick={handleExtendDropDownCompany} className={companyIsExtented ? "sidebar__link__dropdown extented" : "sidebar__link__dropdown"}>
-                <span className="sidebar__link">Company</span><img className="sidebar__link__icon" src={arrowDown} />
+                <span className="sidebar__link">Company</span><img alt="" className="sidebar__link__icon" src={arrowDown} />
                 <Dropdown  classNameDropdownItem="sidebar__dropdown__item" classNameMenu="sidebar__link__menu" left="0" data={companyData} />
               </li>
               <li className="sidebar__link">

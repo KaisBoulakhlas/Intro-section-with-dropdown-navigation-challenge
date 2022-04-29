@@ -15,10 +15,10 @@ export default function Banner() {
                     create team rituals, and watch productivity soar.</p>
                 <button className="btn btn__bg--black">Learn more</button>
                 <div className='container__left__clients'>
-                    <img className='image__client' src={databiz}/>
-                    <img className='image__client' src={audiophile}/>
-                    <img className='image__client' src={meet}/>
-                    <img className='image__client' src={maker}/>
+                    <img className='image__client' alt="" src={databiz}/>
+                    <img className='image__client' alt="" src={audiophile}/>
+                    <img className='image__client' alt="" src={meet}/>
+                    <img className='image__client' alt="" src={maker}/>
                 </div>
             </section>
             <div className="container__right"></div>
